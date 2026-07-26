@@ -312,8 +312,8 @@ h1,h2,h3,h4{ font-weight:800; letter-spacing:-.01em; color:var(--ink); }
 footer{
   background:var(--olive-deep);
   color:rgba(246,239,221,.7);
-  padding:72px 0 28px;
-  margin-top:140px;
+  padding:56px 0 28px;
+  margin-top:64px;
   position:relative;
   overflow:hidden;
 }
