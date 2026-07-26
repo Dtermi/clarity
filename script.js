@@ -125,4 +125,60 @@ document.addEventListener('DOMContentLoaded', () => {
     periodButtons.forEach(b => b.addEventListener('click', () => applyPeriod(b.dataset.period)));
   }
 
+  /* ---------- Donate: pick a privilege, enter nick, buy ---------- */
+  const planEls = document.querySelectorAll('.plan[data-plan]');
+  const orderPanel = document.getElementById('orderPanel');
+  if (planEls.length && orderPanel) {
+    const orderSelected = document.getElementById('orderSelected');
+    const nickInput = document.getElementById('nickInput');
+    const buyBtn = document.getElementById('buyBtn');
+    let selectedPlan = null;
+
+    const currentPeriod = () =>
+      document.querySelector('.period-switch [data-period].active')?.dataset.period || '30';
+
+    const renderSelected = () => {
+      if (!selectedPlan) {
+        orderSelected.innerHTML = `<span class="order-empty">Выберите привилегию выше ↑</span>`;
+        return;
+      }
+      const period = currentPeriod();
+      const priceEl = selectedPlan.querySelector('[data-price]');
+      const price = priceEl ? (priceEl.dataset[`price${period}`] || priceEl.textContent) : '';
+      const iconHtml = selectedPlan.querySelector('.plan-icon').innerHTML;
+      const tint1 = selectedPlan.style.getPropertyValue('--tint1');
+      const tint2 = selectedPlan.style.getPropertyValue('--tint2');
+      orderSelected.innerHTML = `
+        <span class="order-selected-icon" style="--tint1:${tint1};--tint2:${tint2}">${iconHtml}</span>
+        <span class="order-selected-text"><b>${selectedPlan.dataset.planName}</b><span>${price} / ${period} дней</span></span>`;
+    };
+
+    const updateBuyState = () => {
+      const nickOk = /^[A-Za-z0-9_]{3,16}$/.test(nickInput.value.trim());
+      const ready = !!selectedPlan && nickOk;
+      buyBtn.disabled = !ready;
+      orderPanel.classList.toggle('ready', ready);
+    };
+
+    planEls.forEach(plan => {
+      plan.addEventListener('click', () => {
+        planEls.forEach(p => p.classList.remove('selected'));
+        plan.classList.add('selected');
+        selectedPlan = plan;
+        renderSelected();
+        updateBuyState();
+        nickInput.focus();
+      });
+    });
+
+    nickInput.addEventListener('input', updateBuyState);
+
+    buyBtn.addEventListener('click', () => {
+      if (buyBtn.disabled) return;
+      window.clarityToast(`«${selectedPlan.dataset.planName}» для ${nickInput.value.trim()} — переходим к оплате`);
+    });
+
+    periodButtons.forEach(b => b.addEventListener('click', () => { if (selectedPlan) renderSelected(); }));
+  }
+
 });
