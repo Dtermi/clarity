@@ -9,12 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"/>
 <style>
-  .social-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .social-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
   @media(max-width:900px){ .social-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:600px){ .social-grid{ grid-template-columns:1fr; } }
 
   .social-card{
-    position:relative; padding:34px 28px; border-radius:var(--r-lg);
+    position:relative; padding:24px 20px; border-radius:var(--r-md);
     background:#fff; border:1px solid var(--line); overflow:hidden;
     transition:.4s var(--ease); display:flex; flex-direction:column; gap:16px;
   }
@@ -26,7 +26,7 @@
   .social-card:hover::before{ opacity:1; }
   .social-card:hover .social-icon{ transform:rotate(-6deg) scale(1.08); }
   .social-icon{
-    width:58px; height:58px; border-radius:18px; display:flex; align-items:center; justify-content:center;
+    width:52px; height:52px; border-radius:var(--r-sm); display:flex; align-items:center; justify-content:center;
     background:var(--sc-bg,#F4C542); transition:.4s var(--ease); position:relative; z-index:1;
   }
   .social-icon svg{ width:28px; height:28px; }

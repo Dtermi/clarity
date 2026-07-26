@@ -10,10 +10,10 @@
 <link rel="stylesheet" href="style.css"/>
 <style>
   .discord-hero{
-    padding:170px 0 90px; position:relative; overflow:hidden;
+    padding:140px 0 56px; position:relative; overflow:hidden;
   }
   .discord-card{
-    max-width:920px; margin:0 auto; padding:56px 48px; text-align:center;
+    max-width:920px; margin:0 auto; padding:40px 32px; text-align:center;
     border-radius:var(--r-lg); position:relative; overflow:hidden;
     background:linear-gradient(155deg, var(--olive-deep), #2e3821);
     color:#F6EFDD;
@@ -24,11 +24,11 @@
     pointer-events:none;
   }
   .discord-card h1{ color:#fff; font-size:clamp(30px,4.4vw,44px); margin-bottom:14px; position:relative; }
-  .discord-card p{ color:rgba(246,239,221,.75); max-width:520px; margin:0 auto 30px; position:relative; font-size:16px; }
+  .discord-card p{ color:rgba(246,239,221,.75); max-width:520px; margin:0 auto 22px; position:relative; font-size:16px; }
   .online-pill{
     display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.08);
     border:1px solid rgba(255,255,255,.15); padding:9px 18px; border-radius:var(--r-pill);
-    font-size:13.5px; font-weight:600; margin-bottom:26px; position:relative;
+    font-size:13.5px; font-weight:600; margin-bottom:20px; position:relative;
   }
   .online-pill .live-dot{ width:8px; height:8px; border-radius:50%; background:#7FE08A; box-shadow:0 0 0 4px rgba(127,224,138,.25); animation:pulse 2s infinite; }
   @keyframes pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.3); } }
@@ -43,7 +43,7 @@
   }
   .avatars span:first-child{ margin-left:0; }
 
-  .perks-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:100px; }
+  .perks-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:56px; }
   @media(max-width:900px){ .perks-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:620px){ .perks-grid{ grid-template-columns:1fr; } }
 
