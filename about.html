@@ -31,9 +31,14 @@
     border-radius:50%; background:radial-gradient(circle, var(--sand), transparent 70%);
     opacity:.35; filter:blur(10px); pointer-events:none; z-index:0;
   }
+  .lore-panel::after{
+    content:''; position:absolute; bottom:-80px; right:-80px; width:260px; height:260px;
+    border-radius:50%; background:radial-gradient(circle, var(--sand), transparent 70%);
+    opacity:.35; filter:blur(10px); pointer-events:none; z-index:0;
+  }
   .lore-panel .eyebrow{ display:inline-flex; margin-bottom:18px; position:relative; z-index:1; }
   .lore-panel h2{ color:var(--ink); font-size:clamp(26px,3.2vw,36px); margin-bottom:16px; max-width:620px; position:relative; z-index:1; }
-  .lore-panel p{ color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:14px; position:relative; }
+  .lore-panel p{ color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:14px; position:relative; z-index:1; }
   .lore-panel p:last-child{ margin-bottom:0; }
 
   .tech-chips{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
