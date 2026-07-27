@@ -15,47 +15,27 @@
   .discord-card{
     max-width:920px; margin:0 auto; padding:40px 32px; text-align:center;
     border-radius:var(--r-lg); position:relative; overflow:hidden;
-    background:linear-gradient(155deg, var(--olive-deep), #2e3821);
-    color:#F6EFDD;
+    background:linear-gradient(160deg, #ffffff, var(--bg-sand-2));
+    border:1px solid var(--line);
+    box-shadow:var(--shadow-md);
+    color:var(--ink);
   }
-  .discord-card::before{
-    content:''; position:absolute; inset:0;
-    background:radial-gradient(600px 300px at 15% 0%, rgba(244,197,66,.25), transparent 60%);
-    pointer-events:none;
-  }
-  .discord-card h1{ color:#fff; font-size:clamp(30px,4.4vw,44px); margin-bottom:14px; position:relative; }
-  .discord-card p{ color:rgba(246,239,221,.75); max-width:520px; margin:0 auto 22px; position:relative; font-size:16px; }
+  .discord-card h1{ color:var(--ink); font-size:clamp(30px,4.4vw,44px); margin-bottom:14px; position:relative; }
+  .discord-card p{ color:var(--ink-soft); max-width:520px; margin:0 auto 22px; position:relative; font-size:16px; }
   .online-pill{
-    display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15); padding:9px 18px; border-radius:var(--r-pill);
-    font-size:13.5px; font-weight:600; margin-bottom:20px; position:relative;
+    display:inline-flex; align-items:center; gap:10px; background:rgba(62,74,47,.07);
+    border:1px solid var(--line); padding:9px 18px; border-radius:var(--r-pill);
+    font-size:13.5px; font-weight:600; margin-bottom:20px; position:relative; color:var(--olive);
   }
-  .online-pill .live-dot{ width:8px; height:8px; border-radius:50%; background:#7FE08A; box-shadow:0 0 0 4px rgba(127,224,138,.25); animation:pulse 2s infinite; }
+  .online-pill .live-dot{ width:8px; height:8px; border-radius:50%; background:#3E9B4F; box-shadow:0 0 0 4px rgba(62,155,79,.2); animation:pulse 2s infinite; }
   @keyframes pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.3); } }
   .discord-join{ position:relative; }
-
-  .members-strip{ display:flex; justify-content:center; margin-top:-24px; position:relative; }
-  .avatars{ display:flex; }
-  .avatars span{
-    width:44px; height:44px; border-radius:50%; border:3px solid var(--bg-sand);
-    background:linear-gradient(135deg,var(--sand-2),var(--sand-deep)); margin-left:-14px;
-    display:flex; align-items:center; justify-content:center; font-weight:800; color:var(--olive-deep); font-size:13px;
-  }
-  .avatars span:first-child{ margin-left:0; }
 
   .perks-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:56px; }
   @media(max-width:900px){ .perks-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:620px){ .perks-grid{ grid-template-columns:1fr; } }
 
-  .stat-band{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
-    border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; margin-top:90px;
-  }
-  .stat-band div{ background:#fff; padding:30px 16px; text-align:center; }
-  .stat-band b{ display:block; font-size:30px; font-weight:800; color:var(--olive-deep); }
-  .stat-band span{ font-size:12.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em; }
-  @media(max-width:700px){ .stat-band{ grid-template-columns:1fr 1fr; } }
-</style>
+  </style>
 </head>
 <body>
 
@@ -98,15 +78,10 @@
         </a>
       </div>
     </div>
-    <div class="members-strip reveal">
-      <div class="avatars">
-        <span>ЖА</span><span>NK</span><span>ПВ</span><span>SD</span><span>+1.2K</span>
-      </div>
-    </div>
   </div>
 </header>
 
-<section class="container">
+<section class="container" style="padding:20px 0 90px;">
   <div class="section-head reveal">
     <div class="eyebrow" style="margin:0 auto 20px;"><span class="dot"></span>Что внутри</div>
     <h2>Больше, чем просто чат</h2>
@@ -117,21 +92,6 @@
       <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
       <h3>Голосовые каналы</h3>
       <p>Играйте вместе, обсуждайте стройки и планы прямо в голосовых комнатах биома.</p>
-    </div>
-    <div class="card reveal reveal-delay-1">
-      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6"/><path d="M14 4h6v6M10 14 20 4"/></svg></div>
-      <h3>Еженедельные ивенты</h3>
-      <p>PvP-турниры, забеги по гробницам, конкурсы построек с призами каждую неделю.</p>
-    </div>
-    <div class="card reveal reveal-delay-2">
-      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6M12 2v13M8 11l4 4 4-4"/></svg></div>
-      <h3>Розыгрыши привилегий</h3>
-      <p>Регулярные розыгрыши донат-тарифов и внутриигровых наборов среди участников.</p>
-    </div>
-    <div class="card reveal">
-      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/></svg></div>
-      <h3>Быстрая поддержка</h3>
-      <p>Тикет-система и модераторы онлайн — вопросы решаются в течение часа.</p>
     </div>
     <div class="card reveal reveal-delay-1">
       <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div>
@@ -145,15 +105,9 @@
     </div>
   </div>
 
-  <div class="stat-band reveal">
-    <div><b data-count="18400">0</b><span>Участников</span></div>
-    <div><b data-count="1284">0</b><span>Онлайн сейчас</span></div>
-    <div><b data-count="42">0</b><span>Каналов</span></div>
-    <div><b data-count="24" data-suffix="/7">0</b><span>Модерация</span></div>
-  </div>
 </section>
 
-<footer style="margin-top:110px;">
+<footer style="margin-top:0;">
   <div class="container">
     <div class="footer-grid">
       <div>
