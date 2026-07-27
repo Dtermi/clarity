@@ -4,52 +4,36 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>О сервере — Clarity</title>
-<meta name="description" content="Особенности, уникальные механики и философия Minecraft-сервера Clarity."/>
+<meta name="description" content="Ванильные и модовые сезоны, регулярные ивенты, свой лор и оптимизация — как устроен Clarity."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"/>
 <style>
-  .about-split{ display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; margin-bottom:64px; }
-  @media(max-width:900px){ .about-split{ grid-template-columns:1fr; } }
-  .about-visual{
-    aspect-ratio:1/1; border-radius:var(--r-lg);
-    background:
-      radial-gradient(circle at 30% 20%, rgba(244,197,66,.5), transparent 55%),
-      radial-gradient(circle at 75% 75%, rgba(62,74,47,.35), transparent 55%),
-      linear-gradient(155deg, var(--sand-2), var(--sand-deep));
-    position:relative; overflow:hidden;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .about-visual svg{ width:46%; opacity:.9; }
-  .about-visual::after{
-    content:''; position:absolute; inset:0;
-    background:repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 2px, transparent 2px 14px);
-  }
-  .about-copy h2{ font-size:clamp(30px,3.6vw,42px); margin-bottom:18px; }
-  .about-copy p{ color:var(--ink-soft); font-size:16px; margin-bottom:16px; }
+  .season-card{ display:flex; flex-direction:column; gap:10px; }
+  .season-card .pill-tag{ align-self:flex-start; }
+  .season-card ul{ margin-top:4px; display:flex; flex-direction:column; gap:8px; }
+  .season-card ul li{ font-size:14.5px; color:var(--ink-soft); padding-left:18px; position:relative; }
+  .season-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--sand-deep); font-weight:700; }
 
-  .mechanics-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
-  @media(max-width:760px){ .mechanics-grid{ grid-template-columns:1fr; } }
-  .mechanic{
-    display:flex; gap:16px; padding:22px; border-radius:var(--r-md); background:#fff; border:1px solid var(--line);
-    transition:.35s var(--ease);
-  }
-  .mechanic:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--sand-line); }
-  .mechanic .num{ font-size:34px; font-weight:800; color:var(--sand-deep); line-height:1; }
-  .mechanic h4{ font-size:16.5px; margin-bottom:6px; }
-  .mechanic p{ font-size:13.5px; color:var(--ink-soft); }
+  .events-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  @media(max-width:960px){ .events-grid{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:600px){ .events-grid{ grid-template-columns:1fr; } }
 
-  .infographic{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:64px 0;
+  .lore-panel{
+    border-radius:var(--r-lg); padding:48px 44px;
+    background:linear-gradient(175deg, var(--olive-deep), #2c351f);
+    color:#F6EFDD; position:relative; overflow:hidden;
   }
-  @media(max-width:900px){ .infographic{ grid-template-columns:1fr 1fr; } }
-  .info-card{
-    padding:20px 16px; border-radius:var(--r-md); text-align:center;
-    background:linear-gradient(160deg, rgba(255,255,255,.9), rgba(253,249,239,.6));
-    border:1px solid var(--line);
-  }
-  .info-card b{ display:block; font-size:32px; font-weight:800; color:var(--olive-deep); margin-bottom:4px; }
-  .info-card span{ font-size:13px; color:var(--ink-soft); }
+  .lore-panel .eyebrow{ display:inline-flex; margin-bottom:18px; }
+  .lore-panel h2{ color:#fff; font-size:clamp(26px,3.2vw,36px); margin-bottom:16px; max-width:620px; }
+  .lore-panel p{ color:rgba(246,239,221,.78); font-size:15.5px; max-width:640px; margin-bottom:14px; }
+  .lore-panel p:last-child{ margin-bottom:0; }
+  .lore-mark{ position:absolute; right:36px; bottom:-10px; font-size:160px; font-weight:800; color:rgba(255,255,255,.05); line-height:1; user-select:none; }
+
+  .tech-chips{ display:flex; flex-wrap:wrap; gap:10px; }
+  .tech-chips .pill-tag{ background:#fff; border:1px solid var(--line); padding:10px 16px; font-size:13.5px; }
+
+  @media(max-width:640px){ .lore-panel{ padding:34px 24px; } }
 </style>
 </head>
 <body>
@@ -83,55 +67,94 @@
 <header class="page-hero">
   <div class="container">
     <div class="eyebrow reveal" style="margin:0 auto 20px;"><span class="dot"></span>О проекте</div>
-    <h1 class="reveal reveal-delay-1">Проект, построенный на песке смысла</h1>
-    <p class="reveal reveal-delay-2">Clarity — это Minecraft-сервер, где каждый элемент продуман: от генерации мира до системы приватов.</p>
+    <h1 class="reveal reveal-delay-1">Не просто ещё один сервер</h1>
+    <p class="reveal reveal-delay-2">Clarity живёт сезонами: ванильными и модовыми, с регулярными ивентами, своим лором и техническим фундаментом, который держит TPS стабильным даже при полном онлайне.</p>
   </div>
 </header>
 
 <section class="container">
-  <div class="about-split reveal">
-    <div class="about-visual">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M3 21 12 4l9 17H3Z" fill="#232B18" opacity=".85"/><path d="M8 21 12 12l4 9H8Z" fill="#F4C542"/></svg>
-    </div>
-    <div class="about-copy">
-      <h2>Философия минимализма</h2>
-      <p>Мы намеренно отказались от перегруженных меню, десятков плагинов и хаотичной экономики. Clarity — это про ясность: понятные правила, честный баланс и мир, в который приятно возвращаться.</p>
-      <p>Пустынный биом выбран не случайно — это территория с богатой генерацией: оазисы, храмы, караванные пути и скрытые гробницы, которые открывают новый игровой опыт даже для опытных игроков.</p>
-      <a href="history.html" class="btn btn-dark" style="margin-top:10px;">Смотреть историю проекта</a>
-    </div>
-  </div>
 
   <div class="section-head reveal">
-    <div class="eyebrow" style="margin:0 auto 20px;"><span class="dot"></span>Уникальные механики</div>
-    <h2>Чего нет в ванильной игре</h2>
-    <p>Авторский контент, разработанный командой Clarity специально для пустынного биома.</p>
+    <div class="eyebrow" style="margin:0 auto 20px;"><span class="dot"></span>Формат сезонов</div>
+    <h2>Ванильные и модовые сезоны</h2>
+    <p>Мы чередуем форматы, чтобы не приедалось: часть сезонов — честный ванильный выживач, часть — с модами, новыми мобами и механиками.</p>
   </div>
 
-  <div class="mechanics-grid">
-    <div class="mechanic reveal">
-      <div class="num">01</div>
-      <div><h4>Караваны</h4><p>Торговые NPC-караваны путешествуют по миру — их можно сопровождать или перехватывать для редких наград.</p></div>
+  <div class="grid-2">
+    <div class="card season-card reveal">
+      <div class="pill-tag">Vanilla</div>
+      <h3>Ванильный сезон</h3>
+      <p>Классический Minecraft без правок геймплея — ставка на постройки, командную работу и честное выживание без посторонних механик.</p>
+      <ul>
+        <li>Чистая ванильная генерация и мобы</li>
+        <li>Фокус на архитектуре и приватах</li>
+        <li>Оптимизация — есть, геймплей — не тронут</li>
+      </ul>
     </div>
-    <div class="mechanic reveal reveal-delay-1">
-      <div class="num">02</div>
-      <div><h4>Песчаные бури</h4><p>Динамическое погодное событие снижает видимость и усиливает лут в открытых зонах — риск ради награды.</p></div>
-    </div>
-    <div class="mechanic reveal reveal-delay-2">
-      <div class="num">03</div>
-      <div><h4>Гробницы</h4><p>Процедурно генерируемые подземелья с ловушками, головоломками и боссами на пустынную тематику.</p></div>
-    </div>
-    <div class="mechanic reveal reveal-delay-3">
-      <div class="num">04</div>
-      <div><h4>Оазисная экономика</h4><p>Рынок ресурсов привязан к редким оазисам — контроль над территорией даёт честное экономическое преимущество.</p></div>
+    <div class="card season-card reveal reveal-delay-1">
+      <div class="pill-tag">Modded</div>
+      <h3>Модовый сезон</h3>
+      <p>Добавляем технологии, новые биомы и мобов, дополнительные механики выживания — каждый такой сезон как отдельный эксперимент.</p>
+      <ul>
+        <li>Новые мобы, ресурсы и постройки</li>
+        <li>Технологические и магические моды</li>
+        <li>Что приживётся — останется и после вайпа</li>
+      </ul>
     </div>
   </div>
 
-  <div class="infographic">
-    <div class="info-card reveal"><b data-count="14">0</b><span>Уникальных построек</span></div>
-    <div class="info-card reveal reveal-delay-1"><b data-count="6">0</b><span>Игровых механик</span></div>
-    <div class="info-card reveal reveal-delay-2"><b data-count="120" data-suffix="км²">0</b><span>Карта мира</span></div>
-    <div class="info-card reveal reveal-delay-3"><b data-count="0" data-suffix="%">0</b><span>Pay-to-win</span></div>
+  <div class="section-head reveal" style="margin-top:88px;">
+    <div class="eyebrow" style="margin:0 auto 20px;"><span class="dot"></span>Ивенты комьюнити</div>
+    <h2>Не только выживание</h2>
+    <p>Раз в одну-две недели устраиваем тематические ивенты — от социальных игр до полного хаоса на карте.</p>
   </div>
+
+  <div class="events-grid">
+    <div class="card reveal">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-7h6v7"/></svg></div>
+      <h3>Бункер</h3>
+      <p>Закрытая ЧС-игра на выживание: ограниченные ресурсы, роли и как минимум один предатель среди игроков.</p>
+    </div>
+    <div class="card reveal reveal-delay-1">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/><path d="M9 8h6"/></svg></div>
+      <h3>Мафия</h3>
+      <p>Классическая социальная дедукция, перенесённая в Minecraft: ночные фазы, роли и голосования всей деревней.</p>
+    </div>
+    <div class="card reveal reveal-delay-2">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+      <h3>Чувырла</h3>
+      <p>Фирменный хаотичный ивент комьюнити: на карте прячется особый NPC с редким лутом — кто первый найдёт, тот и забирает.</p>
+    </div>
+    <div class="card reveal reveal-delay-3">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18M5 20 12 4l7 16M9 20l3-7 3 7"/></svg></div>
+      <h3>Ограбление каравана</h3>
+      <p>Командный ивент: одни защищают караван с грузом, другие пытаются перехватить его до конца маршрута.</p>
+    </div>
+  </div>
+
+  <div class="lore-panel reveal" style="margin-top:88px;">
+    <div class="eyebrow"><span class="dot"></span>Лор проекта</div>
+    <h2>Пустыня помнит тех, кто был до нас</h2>
+    <p>Мир Clarity — это остатки цивилизации, ушедшей под песок задолго до появления первых игроков. Караванные пути, оазисы и гробницы — не просто декорации, а следы тех, кто когда-то здесь жил и по какой-то причине исчез.</p>
+    <p>Каждый сезон добавляет новую главу: свежие руины, новых NPC-торговцев с собственными историями и слухи, которые постепенно складываются в общий сюжет. Часть лора игроки собирают сами — по надписям, картам и находкам в подземельях.</p>
+    <div class="lore-mark">01</div>
+  </div>
+
+  <div class="section-head reveal" style="margin-top:88px;">
+    <div class="eyebrow" style="margin:0 auto 20px;"><span class="dot"></span>Под капотом</div>
+    <h2>Оптимизация — тоже часть баланса</h2>
+    <p>Красивый мир бесполезен, если сервер лагает. Поэтому техническая часть — не менее приоритетна, чем контент.</p>
+  </div>
+
+  <div class="tech-chips reveal">
+    <span class="pill-tag">Оптимизация тика мира</span>
+    <span class="pill-tag">Умная подгрузка чанков</span>
+    <span class="pill-tag">Снижение лагов от мобов</span>
+    <span class="pill-tag">Стабильный TPS при полном онлайне</span>
+    <span class="pill-tag">Быстрая генерация ландшафта</span>
+    <span class="pill-tag">Античит без потери FPS</span>
+  </div>
+
 </section>
 
 <footer style="margin-top:110px;">
