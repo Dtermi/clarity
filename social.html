@@ -4,13 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Соцсети — Clarity</title>
-<meta name="description" content="Все соцсети Clarity в одном месте: Discord, Telegram, YouTube, TikTok, VK."/>
+<meta name="description" content="Все соцсети Clarity в одном месте: Discord, Telegram, TikTok."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"/>
 <style>
-  .social-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  @media(max-width:900px){ .social-grid{ grid-template-columns:1fr 1fr; } }
+  .social-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:760px; margin:0 auto; }
   @media(max-width:600px){ .social-grid{ grid-template-columns:1fr; } }
 
   .social-card{
@@ -79,43 +78,29 @@
       <div class="social-icon" style="--sc-bg:#5865F2"><svg viewBox="0 0 24 24" fill="#fff"><path d="M20.3 4.9A19.8 19.8 0 0 0 15.6 3l-.4.8a17.5 17.5 0 0 1 3.9 1.6c-2-.9-4-1.4-6-1.4s-4 .5-6 1.4A17.6 17.6 0 0 1 11 3.8L10.6 3a19.8 19.8 0 0 0-4.7 1.9C2.7 8.5 1.9 12 2.3 15.4a20 20 0 0 0 6 3l.9-1.5a13 13 0 0 1-2-1c.2-.1.3-.2.5-.3 3.9 1.8 8.1 1.8 12 0l.5.3a13 13 0 0 1-2 1l.9 1.5a20 20 0 0 0 6-3c.5-4-.6-7.4-3.8-10.5ZM9 13.2c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Zm6 0c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Z"/></svg></div>
       <h3>Discord</h3>
       <p>Комьюнити, ивенты, поддержка и общение с командой в реальном времени.</p>
-      <div class="social-meta"><span class="social-count">18.4K участников</span><span class="social-go">Перейти →</span></div>
+      <div class="social-meta"><span class="social-go">Перейти →</span></div>
     </a>
 
     <a href="https://t.me/clarity" target="_blank" rel="noopener" class="social-card reveal reveal-delay-1" style="--sc:rgba(41,169,222,.28)">
       <div class="social-icon" style="--sc-bg:#29A9DE"><svg viewBox="0 0 24 24" fill="#fff"><path d="M21.9 4.3 2.7 11.7c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.4.8.8.8.4 0 .5-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.4-1.8-1.9-1.4ZM7.9 14.4l9.6-6c.5-.3.9-.1.6.2l-8.2 7.4-.3 3.2-1.7-4.8Z"/></svg></div>
       <h3>Telegram</h3>
       <p>Быстрые новости, анонсы техработ и обсуждения без лишнего шума.</p>
-      <div class="social-meta"><span class="social-count">9.2K подписчиков</span><span class="social-go">Перейти →</span></div>
+      <div class="social-meta"><span class="social-go">Перейти →</span></div>
     </a>
 
-    <a href="https://youtube.com/@clarity" target="_blank" rel="noopener" class="social-card reveal reveal-delay-2" style="--sc:rgba(255,0,0,.22)">
+    <div class="social-card reveal reveal-delay-2" style="--sc:rgba(255,0,0,.15); opacity:.65; cursor:default;">
       <div class="social-icon" style="--sc-bg:#FF3B30"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23 12s0-3.6-.5-5.3a3 3 0 0 0-2.1-2.1C18.7 4 12 4 12 4s-6.7 0-8.4.6A3 3 0 0 0 1.5 6.7C1 8.4 1 12 1 12s0 3.6.5 5.3a3 3 0 0 0 2.1 2.1C5.3 20 12 20 12 20s6.7 0 8.4-.6a3 3 0 0 0 2.1-2.1c.5-1.7.5-5.3.5-5.3ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></div>
       <h3>YouTube</h3>
-      <p>Обзоры обновлений, летсплеи и таймлапсы строек от участников.</p>
-      <div class="social-meta"><span class="social-count">6.7K подписчиков</span><span class="social-go">Перейти →</span></div>
-    </a>
+      <p>Канала пока нет — запустим, как только накопится, что показать.</p>
+      <div class="social-meta"><span class="pill-tag" style="background:rgba(62,74,47,.08);">Скоро</span></div>
+    </div>
 
     <a href="https://tiktok.com/@clarity" target="_blank" rel="noopener" class="social-card reveal" style="--sc:rgba(35,43,24,.2)">
       <div class="social-icon" style="--sc-bg:#232B18"><svg viewBox="0 0 24 24" fill="#F4C542"><path d="M16.6 5.8a4.6 4.6 0 0 1-3.3-1.9v9.7a4 4 0 1 1-3-3.9v2.1a1.9 1.9 0 1 0 1.3 1.8V2h2a4.6 4.6 0 0 0 3 3.6v.2Z"/></svg></div>
       <h3>TikTok</h3>
       <p>Короткие клипы с ивентов, забавные моменты и превью обновлений.</p>
-      <div class="social-meta"><span class="social-count">14.1K подписчиков</span><span class="social-go">Перейти →</span></div>
+      <div class="social-meta"><span class="social-go">Перейти →</span></div>
     </a>
-
-    <a href="https://vk.com/clarity" target="_blank" rel="noopener" class="social-card reveal reveal-delay-1" style="--sc:rgba(0,119,255,.22)">
-      <div class="social-icon" style="--sc-bg:#0077FF"><svg viewBox="0 0 24 24" fill="#fff"><path d="M13.2 17.4c-6 0-9.4-4.1-9.6-11h3c.1 4.8 2.2 6.8 3.9 7.3v-7.3h2.8v4.3c1.6-.2 3.3-2 3.9-4.3h2.8c-.5 2.8-2.5 4.9-4 5.8 1.4.6 3.7 2.5 4.6 5.2h-3.1c-.7-2.2-2.3-3.8-4.2-4v4Z"/></svg></div>
-      <h3>VK</h3>
-      <p>Официальная группа с новостями, обсуждениями и фотоотчётами ивентов.</p>
-      <div class="social-meta"><span class="social-count">5.4K подписчиков</span><span class="social-go">Перейти →</span></div>
-    </a>
-
-    <div class="social-card reveal reveal-delay-2" style="--sc:rgba(244,197,66,.35); justify-content:center; align-items:flex-start;">
-      <div class="social-icon" style="--sc-bg:linear-gradient(135deg,#F4C542,#D9A62E)"><svg viewBox="0 0 24 24" fill="none" stroke="#232B18" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
-      <h3>Все каналы сразу</h3>
-      <p>Не хотите выбирать? Начните с Discord — там собраны ссылки на все остальные площадки.</p>
-      <a href="discord.html" class="btn btn-dark btn-sm" style="margin-top:6px;">Перейти в Discord</a>
-    </div>
   </div>
 </section>
 
