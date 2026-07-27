@@ -26,11 +26,15 @@
     box-shadow:var(--shadow-md);
     color:var(--ink); position:relative; overflow:hidden;
   }
-  .lore-panel .eyebrow{ display:inline-flex; margin-bottom:18px; }
-  .lore-panel h2{ color:var(--ink); font-size:clamp(26px,3.2vw,36px); margin-bottom:16px; max-width:620px; }
-  .lore-panel p{ color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:14px; }
+  .lore-panel::before{
+    content:''; position:absolute; top:-80px; left:-80px; width:260px; height:260px;
+    border-radius:50%; background:radial-gradient(circle, var(--sand), transparent 70%);
+    opacity:.35; filter:blur(10px); pointer-events:none; z-index:0;
+  }
+  .lore-panel .eyebrow{ display:inline-flex; margin-bottom:18px; position:relative; z-index:1; }
+  .lore-panel h2{ color:var(--ink); font-size:clamp(26px,3.2vw,36px); margin-bottom:16px; max-width:620px; position:relative; z-index:1; }
+  .lore-panel p{ color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:14px; position:relative; }
   .lore-panel p:last-child{ margin-bottom:0; }
-  .lore-mark{ position:absolute; right:36px; bottom:-10px; font-size:160px; font-weight:800; color:rgba(62,74,47,.06); line-height:1; user-select:none; }
 
   .tech-chips{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
   .tech-chips .pill-tag{ background:#fff; border:1px solid var(--line); padding:10px 16px; font-size:13.5px; }
@@ -140,7 +144,6 @@
     <p>Когда-то давно, ещё до первых игроков, по этим землям бродил Альен — астральный маг, добрый и бесстрашный. На перекрёстке забытых дорог он наткнулся на Нечто: существо-тишину, в которой прятался крик, и тьму, что жаждала света. Один взгляд твари — и вся его магия иссякла в один миг.</p>
     <p>Альен не сдался и открыл в себе новые пути магии, чтобы бросить Нечто вызов, — но тварь оказалась быстрее и наложила на весь мир проклятие замедления. Единственным спасением была победа над ней, и Альен спрятал по мирам ключи — нити, что должны были привести к нему союзников. Но времени позвать их не осталось.</p>
     <p>Он вышел против Нечто один. Битва была недолгой — не потому, что Альен был слаб, а потому, что тварь не умела проигрывать. В последний миг он вложил в печать всю оставшуюся магию и запечатал Нечто ценой собственной жизни. Время снова потекло, проклятие ослабло — но не исчезло, а самого Нечто одолеть так и не вышло.</p>
-    <div class="lore-mark">01</div>
   </div>
 
   <div class="section-head reveal" style="margin-top:88px;">
