@@ -22,13 +22,6 @@
   }
   .discord-card h1{ color:var(--ink); font-size:clamp(30px,4.4vw,44px); margin-bottom:14px; position:relative; }
   .discord-card p{ color:var(--ink-soft); max-width:520px; margin:0 auto 22px; position:relative; font-size:16px; }
-  .online-pill{
-    display:inline-flex; align-items:center; gap:10px; background:rgba(62,74,47,.07);
-    border:1px solid var(--line); padding:9px 18px; border-radius:var(--r-pill);
-    font-size:13.5px; font-weight:600; margin-bottom:20px; position:relative; color:var(--olive);
-  }
-  .online-pill .live-dot{ width:8px; height:8px; border-radius:50%; background:#3E9B4F; box-shadow:0 0 0 4px rgba(62,155,79,.2); animation:pulse 2s infinite; }
-  @keyframes pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.3); } }
   .discord-join{ position:relative; }
 
   .perks-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:56px; }
@@ -41,7 +34,7 @@
 
 <nav class="navbar">
   <div class="container nav-inner">
-    <a href="index.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><rect x="3.2" y="6" width="17.6" height="12.2" rx="4.2" fill="#FFFDF6" stroke="#232B18" stroke-width="1.3"/><rect x="6" y="17.8" width="2.6" height="3.4" rx="1.1" fill="#FFFDF6" stroke="#232B18" stroke-width="1"/><rect x="10.7" y="17.8" width="2.6" height="4.2" rx="1.1" fill="#FFFDF6" stroke="#232B18" stroke-width="1"/><rect x="15.4" y="17.8" width="2.6" height="3.4" rx="1.1" fill="#FFFDF6" stroke="#232B18" stroke-width="1"/><rect x="7.6" y="10.4" width="2.1" height="2.1" fill="#232B18"/><rect x="14.3" y="10.4" width="2.1" height="2.1" fill="#232B18"/><path d="M9 15c1.2 1.5 4.8 1.5 6 0" stroke="#232B18" stroke-width="1.3" stroke-linecap="round" fill="none"/><rect x="3.2" y="8.4" width="17.6" height="1.7" fill="#FF7A5C"/></svg></span><span>Clarity<small>MINECRAFT · DESERT</small></span></a>
+    <a href="index.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><rect x="3.2" y="6" width="17.6" height="12.2" rx="4.2" fill="#FFFDF6" stroke="#232B18" stroke-width="1.3"/><rect x="6" y="17.8" width="2.6" height="3.4" rx="1.1" fill="#FFFDF6" stroke="#232B18" stroke-width="1"/><rect x="10.7" y="17.8" width="2.6" height="4.2" rx="1.1" fill="#FFFDF6" stroke="#232B18" stroke-width="1"/><rect x="15.4" y="17.8" width="2.6" height="3.4" rx="1.1" fill="#FFFDF6" stroke="#232B18" stroke-width="1"/><rect x="7.6" y="10.4" width="2.1" height="2.1" fill="#232B18"/><rect x="14.3" y="10.4" width="2.1" height="2.1" fill="#232B18"/><path d="M9 15c1.2 1.5 4.8 1.5 6 0" stroke="#232B18" stroke-width="1.3" stroke-linecap="round" fill="none"/><rect x="3.2" y="8.4" width="17.6" height="1.7" fill="#FF7A5C"/></svg></span><span>Clarity<small>SERVER</small></span></a>
     <div class="nav-links">
       <a href="index.html">Главная</a>
       <a href="donate.html">Донат</a>
@@ -68,7 +61,6 @@
 <header class="discord-hero">
   <div class="container">
     <div class="discord-card reveal">
-      <div class="online-pill"><span class="live-dot"></span>1 284 участника онлайн прямо сейчас</div>
       <h1>Комьюнити Clarity живёт в Discord</h1>
       <p>Обсуждения, ивенты, розыгрыши привилегий и техподдержка — всё в одном месте. Присоединяйтесь, чтобы не пропустить обновления.</p>
       <div class="discord-join">
@@ -118,7 +110,7 @@
       <div class="footer-col"><h4>Комьюнити</h4><a href="discord.html">Discord</a><a href="social.html">Соцсети</a><a href="donate.html">Донат</a></div>
       <div class="footer-col"><h4>Сервер</h4><a data-copy="play.clarity.gg" href="javascript:void(0)">IP: play.clarity.gg</a><a href="discord.html">Поддержка</a></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Clarity. Проект не связан с Mojang AB.</span><span>Сделано с любовью к пустыне 🏜</span></div>
+    <div class="footer-bottom"><span>© 2026 Clarity. Проект не связан с Mojang AB.</span></div>
   </div>
 </footer>
 
