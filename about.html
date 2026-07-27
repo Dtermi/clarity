@@ -21,16 +21,18 @@
 
   .lore-panel{
     border-radius:var(--r-lg); padding:48px 44px;
-    background:linear-gradient(175deg, var(--olive-deep), #2c351f);
-    color:#F6EFDD; position:relative; overflow:hidden;
+    background:linear-gradient(160deg, #ffffff, var(--bg-sand-2));
+    border:1px solid var(--line);
+    box-shadow:var(--shadow-md);
+    color:var(--ink); position:relative; overflow:hidden;
   }
   .lore-panel .eyebrow{ display:inline-flex; margin-bottom:18px; }
-  .lore-panel h2{ color:#fff; font-size:clamp(26px,3.2vw,36px); margin-bottom:16px; max-width:620px; }
-  .lore-panel p{ color:rgba(246,239,221,.78); font-size:15.5px; max-width:640px; margin-bottom:14px; }
+  .lore-panel h2{ color:var(--ink); font-size:clamp(26px,3.2vw,36px); margin-bottom:16px; max-width:620px; }
+  .lore-panel p{ color:var(--ink-soft); font-size:15.5px; max-width:640px; margin-bottom:14px; }
   .lore-panel p:last-child{ margin-bottom:0; }
-  .lore-mark{ position:absolute; right:36px; bottom:-10px; font-size:160px; font-weight:800; color:rgba(255,255,255,.05); line-height:1; user-select:none; }
+  .lore-mark{ position:absolute; right:36px; bottom:-10px; font-size:160px; font-weight:800; color:rgba(62,74,47,.06); line-height:1; user-select:none; }
 
-  .tech-chips{ display:flex; flex-wrap:wrap; gap:10px; }
+  .tech-chips{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
   .tech-chips .pill-tag{ background:#fff; border:1px solid var(--line); padding:10px 16px; font-size:13.5px; }
 
   @media(max-width:640px){ .lore-panel{ padding:34px 24px; } }
@@ -98,7 +100,7 @@
       <ul>
         <li>Новые мобы, ресурсы и постройки</li>
         <li>Технологические и магические моды</li>
-        <li>Что приживётся — останется и после вайпа</li>
+        <li>Отдельный баланс и экономика под новый контент</li>
       </ul>
     </div>
   </div>
@@ -126,17 +128,18 @@
       <p>Фирменный хаотичный ивент комьюнити: на карте прячется особый NPC с редким лутом — кто первый найдёт, тот и забирает.</p>
     </div>
     <div class="card reveal reveal-delay-3">
-      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18M5 20 12 4l7 16M9 20l3-7 3 7"/></svg></div>
-      <h3>Ограбление каравана</h3>
-      <p>Командный ивент: одни защищают караван с грузом, другие пытаются перехватить его до конца маршрута.</p>
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+      <h3>Не только Minecraft</h3>
+      <p>Иногда собираемся не в игре: устраиваем совместные вечера в Among Us, Gartic Phone и Roblox для всего комьюнити.</p>
     </div>
   </div>
 
   <div class="lore-panel reveal" style="margin-top:88px;">
     <div class="eyebrow"><span class="dot"></span>Лор проекта</div>
-    <h2>Пустыня помнит тех, кто был до нас</h2>
-    <p>Мир Clarity — это остатки цивилизации, ушедшей под песок задолго до появления первых игроков. Караванные пути, оазисы и гробницы — не просто декорации, а следы тех, кто когда-то здесь жил и по какой-то причине исчез.</p>
-    <p>Каждый сезон добавляет новую главу: свежие руины, новых NPC-торговцев с собственными историями и слухи, которые постепенно складываются в общий сюжет. Часть лора игроки собирают сами — по надписям, картам и находкам в подземельях.</p>
+    <h2>История первого модового сезона</h2>
+    <p>Когда-то давно, ещё до первых игроков, по этим землям бродил Альен — астральный маг, добрый и бесстрашный. На перекрёстке забытых дорог он наткнулся на Нечто: существо-тишину, в которой прятался крик, и тьму, что жаждала света. Один взгляд твари — и вся его магия иссякла в один миг.</p>
+    <p>Альен не сдался и открыл в себе новые пути магии, чтобы бросить Нечто вызов, — но тварь оказалась быстрее и наложила на весь мир проклятие замедления. Единственным спасением была победа над ней, и Альен спрятал по мирам ключи — нити, что должны были привести к нему союзников. Но времени позвать их не осталось.</p>
+    <p>Он вышел против Нечто один. Битва была недолгой — не потому, что Альен был слаб, а потому, что тварь не умела проигрывать. В последний миг он вложил в печать всю оставшуюся магию и запечатал Нечто ценой собственной жизни. Время снова потекло, проклятие ослабло — но не исчезло, а самого Нечто одолеть так и не вышло.</p>
     <div class="lore-mark">01</div>
   </div>
 
