@@ -349,6 +349,8 @@ footer::before{
   border:1px solid var(--line);
 }
 
+.disabled-link{ opacity:.45; cursor:not-allowed !important; pointer-events:none; }
+
 .toast{
   position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(20px);
   background:var(--olive-deep); color:#fff; padding:14px 26px; border-radius:var(--r-sm);
