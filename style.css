@@ -22,8 +22,8 @@
   --coral-soft:  #FFB199;
 
   --bg:          #FFFFFF;
-  --bg-sand:     #FDF9EF;
-  --bg-sand-2:   #F8EFDA;
+  --bg-sand:     #F3FAFD;
+  --bg-sand-2:   #E4F3FA;
   --bg-card:     #FFFFFF;
 
   --ink:         #2A2620;
@@ -33,9 +33,9 @@
   --line:        rgba(62, 74, 47, .10);
   --line-2:      rgba(62, 74, 47, .18);
 
-  --shadow-sm:   0 2px 10px rgba(120, 96, 30, .06);
-  --shadow-md:   0 10px 30px rgba(120, 96, 30, .10);
-  --shadow-lg:   0 24px 60px rgba(120, 96, 30, .16);
+  --shadow-sm:   0 2px 10px rgba(30, 90, 130, .06);
+  --shadow-md:   0 10px 30px rgba(30, 90, 130, .10);
+  --shadow-lg:   0 24px 60px rgba(30, 90, 130, .16);
   --shadow-glow: 0 0 0 1px rgba(79,184,232,.25), 0 20px 50px rgba(79,184,232,.25);
 
   --r-sm:  10px;
