@@ -1,19 +1,21 @@
-{
-  "name": "clarity-donate-shop",
-  "version": "1.0.0",
-  "description": "Clarity — Minecraft desert-server donate shop with DonationAlerts + RCON + LuckPerms",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev":   "nodemon server.js"
-  },
-  "dependencies": {
-    "better-sqlite3": "^9.4.3",
-    "dotenv":         "^16.4.5",
-    "express":        "^4.19.2",
-    "rcon-client":    "^4.3.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0"
-  }
-}
+# Clarity
+
+Современный Minecraft-сервер с пустынным (desert) биомом.
+Минимализм, премиум-дизайн, честная экономика.
+
+## Страницы
+- `index.html` — Главная
+- `donate.html` — Донат
+- `discord.html` — Discord
+- `about.html` — О сервере
+- `social.html` — Соцсети
+- `history.html` — История
+
+## Backend
+`server.js` — Express-сервер: приём донатов через DonationAlerts webhook,
+выдача привилегий через RCON/LuckPerms, Telegram Login верификация.
+
+```
+npm install
+npm start
+```
